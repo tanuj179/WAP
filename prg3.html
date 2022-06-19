@@ -1,0 +1,108 @@
+<!--json html-->
+<!DOCTYPE html>
+<html>
+<head>
+         <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<style>
+	table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: aqua;
+    }
+
+    th {
+        background-color: black;
+        color: white;
+    }
+
+    .button {
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:2%;
+        margin-bottom:5%;
+        border-radius: 10px;
+        font-size: 30px;
+        width: 200px;
+
+    }
+
+    .button:hover {
+        color: black;
+        background: white;
+    }
+</style>
+<body>
+  <div style="display:grid;">
+    <button class="button btn-primary text-center" id="button" onClick="createTable()">CLick here</button>
+    <p id="para1"></p>
+  </div>
+  <script>
+    function createTable(){
+     var stud=`[
+                   {
+                    "ID" : "RVCEMCA21031",
+                    "Name" : "Kishankumar Dahiya",
+                    "DOB" : "15/06/1999",
+                    "Batch" : "2021 - 23"
+                    },
+                   {
+                    "ID" : "RVCEMCA21032",
+                    "Name" : "Harikumar D'Souza",
+                    "DOB" : "25/10/1998",
+                    "Batch" : "2021 - 24"
+                    },
+                   {
+                    "ID" : "RVCEMCA21033",
+                    "Name" : "Minariz D'Souza",
+                    "DOB" : "5/9/1999",
+                    "Batch" : "2021 - 23"
+                    },
+                   {
+                    "ID" : "RVCEMCA21034",
+                    "Name" : "Alwin Fernandes",
+                    "DOB" : "11/3/1999",
+                    "Batch" : "2021 - 23"
+                    },
+                   {
+                    "ID" : "RVCEMCA21035",
+                    "Name" : "Harikumar Gouda",
+                    "DOB" : "25/7/2000",
+                    "Batch" : "2022 - 24"
+                    },
+                   {
+                    "ID" : "RVCEMCA21036",
+                    "Name" : "Komal Solanki",
+                    "DOB" : "22/8/1998",
+                    "Batch" : "2021 - 23"
+                    },
+                   {
+                    "ID" : "RVCEMCA21037",
+                    "Name" : "Debaditya Haider",
+                    "DOB" : "2/12/2000",
+                    "Batch" : "2021 - 23"
+                    }]`
+     students=JSON.parse(stud)
+     var tab="<table border=1><tr><th>USN</th><th>Name</th><th>Date of Birth</th><th>Branch</th><tr>"
+   
+     students.forEach(function(d){
+      tab+="<tr><td>"+d.ID+"</td><td>"+d.Name+"</td><td>"+d.DOB+"</td><td>"+d.Batch+"</td></tr>"
+      });
+     
+     tab+="</table>"
+   
+     document.getElementById("para1").innerHTML=tab;
+   }
+   </script>
+</body>
+</html>

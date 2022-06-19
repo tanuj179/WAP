@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>D3js</title>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+    </head>  
+    <body>
+      <script>
+       var data=[10,20,30,40,50]
+       var width=800
+        scaleFactor=5
+        height=40
+       var graph=d3.select("body")
+        .append("svg")
+        .attr("width",width)
+        .attr("height",height*scaleFactor);
+      var bar=graph.selectAll("g")
+        .data(data)
+        .enter()
+        .append("g")
+        .attr("transform",function (d,i){
+          return "translate(0,"+i*height+")"
+        });
+      bar.append("rect")
+        .attr("width",function (d){
+          return d*scaleFactor;
+        })
+        .style("fill",function (d){
+          var color;
+          if(d==10){return color="red";}
+          else if(d==20){return color="blue";}
+          else if(d==30){return color="green";}
+          else if(d==40){return color="orange"}
+          else if(d==50){return color="yellow";}
+          return color;
+        })
+        .attr("height",height-2);
+      bar.append("text")
+        .attr("x",function (d){
+          return d*scaleFactor;
+        })
+        .attr("y",height -10)
+        .attr("dy","0.35rem")
+        .text(function (d){
+          return d;
+        });
+        graph.attr("transform","translate (0,0) rotate(270)");
+      </script>
+  
+    </body>
+</html>

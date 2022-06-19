@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <usn>101</usn>
+        <name>Tanuj</name>
+        <age>22</age>
+        <year>2020</year>
+    </student>
+    <student>
+        <usn>101</usn>
+        <name>Tanuj</name>
+        <age>22</age>
+        <year>2020</year>
+    </student>
+    <student>
+        <usn>101</usn>
+        <name>Tanuj</name>
+        <age>22</age>
+        <year>2020</year>
+    </student>
+    <student>
+        <usn>101</usn>
+        <name>Tanuj</name>
+        <age>22</age>
+        <year>2020</year>
+    </student>
+    <student>
+        <usn>101</usn>
+        <name>Tanuj</name>
+        <age>22</age>
+        <year>2020</year>
+    </student>
+    <student>
+        <usn>101</usn>
+        <name>Tanuj</name>
+        <age>22</age>
+        <year>2020</year>
+    </student>
+</students>
